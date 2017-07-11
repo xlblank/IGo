@@ -12,7 +12,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="首页">
+            android:label="我要营销">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

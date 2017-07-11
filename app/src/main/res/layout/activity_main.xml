@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.ggyd.cmcc.igo.MainActivity">
 
+    <!--
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home_gray" />
+        -->
 
     <ListView
+        android:id="@+id/my_list_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#f00"></ListView>
+        android:layout_height="match_parent">
 
 
-    <LinearLayout
+    </ListView>
+
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:padding="1dp">
 
         <RadioButton
             style="@style/MyRadioButton"
-            android:drawableTop="@drawable/home_gray"
-            android:text="首页" />
+            android:drawableTop="@drawable/btn_home_selector"
+            android:text="首页"
+            android:textColor="@drawable/text_selector" />
 
         <RadioButton
             style="@style/MyRadioButton"
-            android:drawableTop="@drawable/find_gray"
+            android:drawableTop="@drawable/btn_find_selector"
             android:text="发现" />
 
         <RadioButton
             style="@style/MyRadioButton"
-            android:drawableTop="@drawable/me_gray"
+            android:drawableTop="@drawable/btn_me_selector"
             android:text="我" />
 
+    </RadioGroup>
 
-    </LinearLayout>
 
-
-</LinearLayout>
+</RelativeLayout>
