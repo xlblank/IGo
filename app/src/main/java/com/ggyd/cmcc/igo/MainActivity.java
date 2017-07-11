@@ -51,6 +51,8 @@ public class MainActivity extends Activity {
 
         @Override
         public Object getItem(int position) {
+            Log.i("igo", "getItem：" + position);
+
             return personList.get(position);
         }
 
@@ -60,8 +62,15 @@ public class MainActivity extends Activity {
         }
 
         @Override
-        public View getView(int position, View view, ViewGroup viewGroup) {
-            View item = View.inflate(MainActivity.this, R.layout.list_item, null);
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            Log.i("igo", "position：" + position + "，convertView：" + convertView + "，parent：" + parent);
+            View item = null;
+            if (convertView != null) {
+                item = convertView;
+            } else {
+                item = View.inflate(MainActivity.this, R.layout.list_item, null);
+            }
 
             Person person = (Person) getItem(position);
             TextView my_title = (TextView) item.findViewById(R.id.my_title);
